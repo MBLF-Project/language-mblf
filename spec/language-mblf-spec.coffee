@@ -5,11 +5,13 @@ describe "Mblf grammar", ->
   grammar = null
 
   beforeEach ->
+    atom.config.set('core.useTreeSitterParsers', false)
+
     waitsForPromise ->
       atom.packages.activatePackage("language-mblf")
 
     runs ->
-      grammar = atom.syntax.grammarForScopeName("source.mblf")
+      grammar = atom.grammars.grammarForScopeName("source.mblf")
 
   it "parses the grammar", ->
     expect(grammar).toBeTruthy()
