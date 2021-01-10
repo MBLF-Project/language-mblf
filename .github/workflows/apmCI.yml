@@ -1,0 +1,27 @@
+name: APM CI
+
+on:
+  push:
+    branches: [ master, beta ]
+  pull_request:
+    branches: [ master, beta ]
+
+jobs:
+  Test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        channel: [stable, beta]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Download Atom
+      run: npx setup-atom ${{ matrix.channel }}
+    - name: Atom version
+      run: atom -v
+    - name: APM version
+      run: apm -v
+    - name: Install dependencies
+      run: apm ci
+    - name: Run tests 🧪
+      run: atom --test spec
