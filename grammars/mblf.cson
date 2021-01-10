@@ -8,6 +8,10 @@
 ]
 'patterns': [
   {
+    'match': 'var\ +'
+    'name': 'keyword.operator'
+  },
+  {
     'match': ';;.*'
     'name': 'comment'
   }
