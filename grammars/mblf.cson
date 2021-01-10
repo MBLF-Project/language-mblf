@@ -2,7 +2,7 @@
 #   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
 
 'scopeName': 'source.mblf'
-'name': 'Mblf'
+'name': 'MBLF'
 'fileTypes': [
   'extension'
 ]
