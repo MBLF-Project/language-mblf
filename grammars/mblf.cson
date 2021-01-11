@@ -8,8 +8,15 @@
 ]
 'patterns': [
   {
-    'match': '(^\\s*)(del)?var\ +'
-    'name': 'keyword.operator'
+    'match': '(^\\s*)((del)?var)\ +([[:alnum:]]+)'
+    'captures':
+      2: name: 'keyword.operator'
+      4: name: 'builtin.variable'
+  },
+  {
+    'match': '(^\\s*)(point(m)?|addv|subv|copy)\ +([[:alnum:]]+)'
+    'captures':
+      4: name: 'builtin.variable'
   },
   {
     'match': ';;.*$'
