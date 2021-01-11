@@ -8,7 +8,7 @@
 ]
 'patterns': [
   {
-    'match': 'var\ +'
+    'match': '(^\\s*)var\ +'
     'name': 'keyword.operator'
   },
   {
