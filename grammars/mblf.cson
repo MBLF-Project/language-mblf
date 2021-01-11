@@ -8,6 +8,12 @@
 ]
 'patterns': [
   {
+    'match': '(^\\s*)(add(b)?|sub(b)?)\ +(((0x)?(\\d|[A-F])+)|(\"\[[:ascii:]]\"))'
+    'captures':
+      6: name: 'constant'
+      9: name: 'string'
+  },
+  {
     'match': '(^\\s*)((del)?var)\ +([[:alnum:]]+)'
     'captures':
       2: name: 'keyword.operator'
