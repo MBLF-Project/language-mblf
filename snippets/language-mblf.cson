@@ -2,9 +2,9 @@
 # https://github.com/atom/language-javascript/blob/master/snippets/javascript.cson
 
 '.source.mblf':
-  'Method documentation':
-    'prefix': 'doc'
-    'body': ';; ${1:method} - ${2:description}'
-  'Variable':
-    'prefix': 'var'
-    'body': 'var ${1:name}'
+  Documentation:
+    prefix: 'doc'
+    body: ';; ${1:method} - ${2:description}'
+  Variable:
+    prefix: 'var'
+    body: 'var ${1:name}'
