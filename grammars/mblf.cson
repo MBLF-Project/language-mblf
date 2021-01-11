@@ -14,13 +14,13 @@
       9: name: 'string'
   },
   {
-    'match': '(^\\s*)((del)?var)\ +([[:ascii:]]+)'
+    'match': '(^\\s*)((del)?var)\ +((?=[[:ascii:]])[^;]+)'
     'captures':
       2: name: 'keyword.operator'
       4: name: 'builtin.variable'
   },
   {
-    'match': '(^\\s*)(point(m)?|addv|subv|copy)\ +([[:ascii:]]+)'
+    'match': '(^\\s*)(point(m)?|addv|subv|copy)\ +((?=[[:ascii:]])[^;]+)'
     'captures':
       4: name: 'builtin.variable'
   },
