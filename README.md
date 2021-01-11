@@ -1,3 +1,3 @@
 # MBLF language package
 
-The atom language package for mblf, by the makers of mblf
+The atom language package for MBLF, by the makers of MBLF.
