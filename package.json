@@ -1,13 +1,13 @@
 {
   "name": "language-mblf",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The atom language package for mblf, by the makers of mblf",
   "keywords": [
     "mblf",
     "language",
     "grammar"
   ],
-  "repository": "https://github.com/Brainfuck-Project/language-mblf",
+  "repository": "https://github.com/MBLF-Project/language-mblf",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

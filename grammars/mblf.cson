@@ -1,14 +1,37 @@
 # If this is your first time writing a language grammar, check out:
 #   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
 
-'scopeName': 'source.mblf'
-'name': 'Mblf'
-'fileTypes': [
+scopeName: 'source.mblf'
+name: 'MBLF'
+fileTypes: [
   'extension'
 ]
-'patterns': [
+patterns: [
   {
-    'match': '^\\s*@@.*$'
-    'name': 'comment'
+    match: '(^\\s*)(\#include)\ +(\"([[:ascii:]]+)(\.mblf)?\")'
+    captures:
+      2: name: 'keyword'
+      3: name: 'string'
+  },
+  {
+    match: '(^\\s*)(add(b)?|sub(b)?)\ +(((0x)?(\\d|[A-F])+)|(\"\[[:ascii:]]\"))'
+    captures:
+      6: name: 'constant'
+      9: name: 'string'
+  },
+  {
+    match: '(^\\s*)((del)?var)\ +((?=[[:ascii:]])[^;]+)'
+    captures:
+      2: name: 'keyword.operator'
+      4: name: 'builtin.variable'
+  },
+  {
+    match: '(^\\s*)(point(m)?|addv|subv|copy)\ +((?=[[:ascii:]])[^;]+)'
+    captures:
+      4: name: 'builtin.variable'
+  },
+  {
+    match: ';;.*$'
+    name: 'comment'
   }
 ]
