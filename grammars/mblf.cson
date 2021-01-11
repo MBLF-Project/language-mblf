@@ -8,6 +8,12 @@
 ]
 'patterns': [
   {
+    'match': '(^\\s*)(\#include)\ +(\"([[:ascii:]]+)(\.mblf)?\")'
+    'captures':
+      2: name: 'keyword'
+      3: name: 'string'
+  },
+  {
     'match': '(^\\s*)(add(b)?|sub(b)?)\ +(((0x)?(\\d|[A-F])+)|(\"\[[:ascii:]]\"))'
     'captures':
       6: name: 'constant'
