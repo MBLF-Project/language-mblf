@@ -1,3 +1,2 @@
-## 0.1.0 - First Release
-* Every feature added
-* Every bug fixed
+## Releases
+They can be found here on [GitHub](https://github.com/MBLF-Project/language-mblf/releases)

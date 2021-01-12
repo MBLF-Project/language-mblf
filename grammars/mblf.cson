@@ -4,7 +4,7 @@
 scopeName: 'source.mblf'
 name: 'MBLF'
 fileTypes: [
-  'extension'
+  'mblf'
 ]
 patterns: [
   {
