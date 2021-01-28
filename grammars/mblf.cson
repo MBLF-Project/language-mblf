@@ -31,6 +31,11 @@ patterns: [
       4: name: 'builtin.variable'
   },
   {
+    match: '(^\\s*)(prints)\ +(\"[[:ascii:]]*\")'
+    captures:
+      3: name: 'string'
+  },
+  {
     match: ';;.*$'
     name: 'comment'
   }
